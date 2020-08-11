@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body html{
+    background-color: white;
+    font-size: 16px;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+h2 {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: #e2e2e2;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+p {
+    font-family: 'Droid Serif', serif;
+    font-size: 1rem;
+    }
+.wrapper{
+    background-image: url('../_images/Me-Falling.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: grid;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(4, 1fr);
+    /**
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    **/
+    grid-gap: 0;
+}
+.nested{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.navbar{
+    grid-column: 1/5;
+    padding: 1% 5%;
+  /*
+    box-shadow: 0 4px 2px -2px #ddd;
+  */
+}
+.navbrand{
+  grid-column: 1/5;
+  text-align: center;
+}
+.navbrand span{
+  color: #4180ca;
+}
+.navbrand img{
+  height: 200px;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  margin: 0 10px;
+}
+.navbrand h1{
+  font-size: 5rem;
+  line-height: 200px;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+
+.navmenu{
+  grid-column: 3/5;
+}
+nav{
+  float: right;
+  margin-top: 20px;
+}
+nav ul li{
+  display: inline;
+  text-decoration: none;
+  margin: 0 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  font-size: 20px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+nav ul li a:hover{
+  color: #14fd75;
+}
+.mainfocus{
+    grid-column: 1/5;
+
+    height: 90vh;
+    max-height: 300px;
+    margin: 0 5%;
+    /*
+        box-shadow: 0 4px 2px -2px #ddd;
+    */
+}
+.mainfocus h1{
+  font-size: 4rem;
+  text-transform: uppercase;
+  position: relative;
+  top: 25%;
+  right: 50px;
+  float: right;
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  line-height: .9em;
+}
+.mainfocus h2{
+  display: none;
+  position: relative;
+  top: 50%;
+  left: 5%;
+}
+.mainfocus span{
+  color: #4180ca;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.skill-left{
+  padding: 20px;
+  margin: 10px 20px;
+  background-color: rgba(000, 0, 0, 0.8);
+  border-radius: 50% 0 50% 0;
+  color: white;
+  text-align: center;
+}
+.skill-right{
+  padding: 20px;
+  margin: 10px 20px;
+  background-color: rgba(000, 0, 0, 0.8);
+  border-radius: 0 50% 0 50%;
+  color: #fff;
+  text-align: center;
+}
+.fa-mobile, .fa-microchip, .fa-code, .fa-hashtag{
+  color: #4180ca;
+}
+.aboutsection{
+    grid-column: 1/3;
+    border-right: 1px #369e60 dashed;
+    padding: 20px;
+    text-align: center;
+}
+.aboutsection  h1{
+  color: #4180ca;
+  margin-bottom: 10px;
+}
+.formsection{
+    grid-column: 3/5;
+    padding: 20px;
+    text-align: center;
+}
+.formsection h1{
+  color: #4180ca;
+  margin-bottom: 10px;
+}
+input{
+  padding: 4px;
+}
+textarea{
+  padding: 4px;
+}
+footer{
+  background-color: #4180ca;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  grid-column: 1/5;
+  -webkit-box-shadow: inset 0 20px 10px -20px #000;
+  -moz-box-shadow: inset 0 20px 10px -20px #000;
+  box-shadow: inset 0 20px 10px -20px #000;
+}
+footer p{
+  margin-bottom: 5px;
+}
+footer a{
+  text-decoration: none;
+  color: #ccc;
+}
+@media(max-width:950px) {
+  .navbrand img{
+    height: 150px;
+  }
+  .navbrand h1{
+    font-size: 4rem;
+    line-height: 150px;
+  }
+
+}
+@media(max-width:720px) {
+  h1{
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: normal;
+  }
+  .navbrand{
+    grid-column: 1/5;
+  }
+  .navbrand img{
+    height: 60px;
+  }
+  .navbrand h1{
+    font-size: 2rem;
+    line-height: 60px;
+  }
+  .mainfocus{
+    height: 400px;
+  }
+  .mainfocus h2{
+    display: none;
+  }
+  .mainfocus h1{
+    font-size: 2.5rem;
+  }
+  .skillsection{
+    grid-column: 1/5;
+  }
+  .skill-left{
+    grid-column: 1/3;
+  }
+  .skill-right{
+    grid-column: 3/5;
+  }
+  .aboutsection{
+      grid-column: 1/5;
+      border: none;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px #4180ca dashed;
+      margin-bottom: 20px;
+  }
+  .formsection{
+      grid-column: 1/5;
+      padding: 0 20px 20px 20px;
+      text-align: center;
+  }
+}
